@@ -1,6 +1,7 @@
-#inlcude < stdio.h>
-#inlcude < stdlib.h>
-#inlcude "mpi.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <mpi.h>
+
 #define BLOCKSIZE 128000 //change this according to the test cases
 
 int main(int argc, char **argv)
@@ -15,7 +16,7 @@ int main(int argc, char **argv)
 
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &myRank);
-    MPI_COMM_size(MPI_COMM_WORLD, &totalRanks);
+    MPI_Comm_size(MPI_COMM_WORLD, &totalRanks);
 
     // create data array of bufsize for each rank
     // Initialize array with 1s
