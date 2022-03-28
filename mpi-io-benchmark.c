@@ -1,4 +1,4 @@
-                                                                                                                            90,1          Bot#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "mpi.h"
 
