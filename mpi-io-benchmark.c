@@ -56,7 +56,7 @@ int main(int argc, char **argv)
   }
   char *path = calloc(512, sizeof(char));
 #if NVME
-  sprintf(path, "/mnt/nume/uid_%s/job_%s/%s%d.txt", getenv("SLURM_JOB_UID"), getenv("SLURM_JOB_ID"), "BlockTest", BLOCKSIZE);
+  sprintf(path, "/mnt/nvme/uid_%s/job_%s/%s%d.txt", getenv("SLURM_JOB_UID"), getenv("SLURM_JOB_ID"), "BlockTest", BLOCKSIZE);
 #else
   getcwd(path, 511);
   sprintf(path, "%s%s%d.txt", path, "BlockTest", BLOCKSIZE);
